@@ -1,0 +1,309 @@
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{   
+    font-size: 62.5%;
+}
+
+body{
+    background-color: #0f1c30;
+    
+}
+
+.quiz-container{
+    background-color: rgb(226, 226, 226);
+    border-radius: 2rem;
+    box-shadow: 0 0 10px 2px rgba(100, 100, 100, 0.1);
+    width: 65rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+
+}
+
+.quiz-header{
+    padding: 3rem;
+}
+  
+h1{
+    
+    padding: 2rem;
+    text-align: center;
+    margin: 0;
+    
+}
+
+
+  
+.quiz-header ul{
+    list-style-type: none;
+    padding: 0;
+}
+  
+.quiz-header ul li{
+    font-size: 1.7rem;
+    line-height: 4rem;
+
+}
+
+.quiz-header ul li label{
+    cursor: pointer;
+}
+  
+.quiz-container button{
+    background-color: rgb(78, 78, 156);
+    color: #fff;
+    border: none;
+    display: block;
+    width: 100%;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-family: inherit;
+    padding: 1.3rem;
+  
+    border-bottom-left-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+}
+  
+.quiz-container button:hover{
+    background-color: #04adc4;
+}
+  
+.quiz-container button:focus{
+    outline: none;
+    background-color: #44b927;
+}
+
+.logo a{
+    text-decoration: none;
+    color: #ddd;
+}
+
+
+
+
+
+
+
+
+
+/*CSS NAV*/
+nav{
+    background: #171c24;
+    display: flex;
+    flex-wrap: wrap; 
+    align-items: center;
+    justify-content: space-between;
+    height: 7rem;
+    padding: 0 10rem;
+    top:0;
+    position: fixed;
+    width: 100%;
+}
+nav .logo{
+    color: #fff;
+    font-size: 3rem;
+    font-weight: 500;
+    letter-spacing: -1px;
+}
+nav .nav-items{
+    display: flex;
+    flex:1;
+    list-style: none;
+    padding: 0 0 0 4rem;
+}
+
+nav .nav-items li {
+    padding: 0 1.5rem;
+
+}
+
+
+
+nav .nav-items li a {
+    color: #fff;
+    font-size: 1.9rem;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+nav .nav-items li a:hover{
+    color: mediumseagreen;
+}
+
+nav form{
+    display: flex;   
+    height: 4rem;
+    background: #1e232b;
+    border-radius: 2px;
+    padding: 0.2rem;
+    min-width: 18%!important;
+}
+
+nav form .search-data{
+    height: 100%;
+    width: 100%;
+    padding: 0 1rem;
+    color: #fff;
+    font-weight: 500;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+}
+
+nav form button{
+    padding: 0 1rem;
+    background: mediumseagreen;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    border-radius: 0.2rem;
+
+}
+nav .cancel-icon{
+    font-size: 2rem;
+    width: 5rem;
+    color: #fff;
+    text-align: center;
+    margin: 0 5rem;
+    cursor: pointer;
+    display: none;
+
+}
+nav .menu-icon,
+nav .search-icon{
+    width: 5rem;
+    color: #fff;
+    text-align: center;
+    font-size: 1.7rem;
+    margin: 0 5rem;
+    cursor: pointer;
+    display: none;
+}
+
+nav .menu-icon span,
+nav .search-icon,
+nav .cancel-icon{
+
+    display: none;
+}
+
+@media(max-width: 1820px) {
+    nav{
+        padding: 0 5rem;
+    }
+}
+
+@media(max-width: 1160px ) {
+    nav{
+        padding: 0;
+    }
+
+    nav .logo{
+        flex: 2;
+        text-align: center;
+    }
+
+    nav .nav-items{
+        position: fixed;
+        z-index: 99;
+        top: 6.5rem;
+        width: 100%;
+        left: -100%;
+        height:100%;
+        background:#14181f;
+        display: inline-block;
+        padding: 1rem 5rem 0 5rem;
+        text-align: center;
+        transition: left 0.3s ease;
+    }
+
+    nav .nav-items.active{
+        left: 0%;
+    }
+
+    nav .nav-items li {
+        line-height: 8rem;
+        margin: 0.5rem 0;
+    }
+
+    nav .nav-items li a{
+        font-size: 2.3rem;
+    }
+
+    nav form{
+        position: absolute;
+        top:8rem;   
+        right: 5rem;
+        opacity: 0;
+        pointer-events: none;
+        transition: top 0.3s ease, opacity 0.1s ease;
+    }
+    nav form.active{
+        opacity: 1;
+        top: 9.5rem;
+        pointer-events: auto;
+    }
+
+    nav form:before{
+        position: absolute;
+        content: "";
+        top: -1.3rem;
+        right: 0;
+        width: 0;
+        height: 0;
+        z-index: -1;
+        margin: -2rem 0 0;
+        border: 1rem solid transparent;
+        border-bottom-color:#1e232b;
+    }
+
+    nav form:after{
+        position: absolute;
+        content: "";
+        height: 6rem;
+        width: calc(100% + 2rem);
+        padding: 0.2rem;
+        background: #1e232b;
+        border-radius: 0.2rem;
+        z-index: -2;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+    }
+
+    nav .menu-icon {
+        display: block;
+    }
+
+    nav .search-icon,
+    nav .menu-icon span{
+        display: block;
+    }
+
+    nav .search-icon.hide,
+    nav .menu-icon span.hide,
+    footer.hide
+    {
+        display: none;
+    }
+
+    nav .cancel-icon.show{
+        display: block;
+    }
+
+    .quiz-container.hide{
+        display: none;
+    }
+
+}
+
+
+
+

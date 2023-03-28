@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index,follow">
+    <link rel="icon" href="images/it_home_macos_bigsur_icon_190082.ico">
+    <link rel="stylesheet" href="Styles/contact.css">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://fontawesome.com/icons"></script>
+    <script src="https://kit.fontawesome.com/a4dace6bf3.js" crossorigin="anonymous"></script>
+    <title>Contact</title>
+    
+</head>
+<body>
+
+        <header>
+            <nav>
+            <div class="menu-icon"><span class="fas fa-bars"></span></div>
+            <div class="logo"><a href="index.html">BubbleSort</a></div>                
+                <div class="nav-items">
+                    <li><a href="implementation.html">Implementare</a></li>
+                    <li><a href="interactive.html">Interactiv</a></li>
+                    <li><a href="quiz.html">Quiz</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </div>
+
+                <div class="search-icon"><span class="fas fa-search"></span></div>
+                <div class="cancel-icon"><span class="fas fa-times"></span></div>
+
+                <form action="#">
+                    <input type="search" class= "search-data" placeholder= "Cauta cuvinte" required>
+                    <button type= "submit" class="fas fa-search"></button>
+                </form>
+            </nav>
+        </header>
+
+
+<div class="container">
+
+    <div class="contact-box">
+        <div class="contact-left">
+            <h3>Send your request</h3>
+            <form id = "contact-form" method="post" action="mailto:fpopa506@gmail.com?subject=Problems"  enctype="text/plain">
+                <div class="input-row">
+                    <div class="input-group">
+                        <label for="Name">Nume</label>
+                        <input type="text" name="Name" id="Name" placeholder="Nume si prenume" required>
+                    </div>
+                
+                    <div class="input-group">
+                        <label for="Phone">Telefon</label>
+                        <input type="text" name="Phone" id="Phone"  placeholder="0731 785 932" required>
+                    </div>
+                </div>
+
+                <div class="input-row">
+                    <div class="input-group">
+                        <label for="Email">Email</label>
+                        <input type="email" name="Email" id="Email"  placeholder="example.email@gmail.com" required>
+                    </div>
+                
+                    <div class="input-group">
+                        <label for="Subject">Subiect</label>
+                        <input type="text" name="Subject" id="Subject" placeholder="Subiectul problemei">
+                    </div>
+                </div>
+
+                <label for="Message">Mesaj</label>
+                <textarea  rows="4" name="Message" id="Message"  required></textarea>
+                <button type="submit" >TRIMITE</button>
+            </form>
+        </div>
+
+        <div class="contact-right">
+            <h3>Contacteaza-ne</h3>
+            <table>
+                <tr>
+                    <td>Email:</td>
+                    <td>contact.me@gmail.com</td>
+                </tr>
+
+                <tr>
+                    <td>Telefon:</td>
+                    <td>0765 544 644</td>
+                </tr>
+
+                <tr>
+                    <td>Adresa:</td>
+                    <td>Str. Nicolae Iorga nr 17 bl. 7 <br>
+                         vis-a-vis Prefectura Olt</td>
+                </tr>
+
+
+            </table>
+
+
+
+        </div>
+    </div>
+</div>
+
+    <script>
+        const menuBtn = document.querySelector(".menu-icon span");
+        const searchBtn = document.querySelector(".search-icon");
+        const cancelBtn = document.querySelector(".cancel-icon");
+        const items = document.querySelector(".nav-items");
+        const form = document.querySelector("form");
+        const footer = document.querySelector("footer");
+
+        menuBtn.onclick = () => {
+            items.classList.add("active");
+            menuBtn.classList.add("hide");
+            searchBtn.classList.add("hide");
+            cancelBtn.classList.add("show");
+            footer.classList.add("hide");
+
+        }
+
+        cancelBtn.onclick = () => {
+            items.classList.remove("active");
+            menuBtn.classList.remove("hide");
+            searchBtn.classList.remove("hide");
+            cancelBtn.classList.remove("show");
+            form.classList.remove("active");
+            footer.classList.remove("hide");
+        }
+
+        searchBtn.onclick = () => {
+            form.classList.add("active");
+            searchBtn.classList.add("hide");
+            cancelBtn.classList.add("show");
+        }
+    </script>
+</body>
+</html>

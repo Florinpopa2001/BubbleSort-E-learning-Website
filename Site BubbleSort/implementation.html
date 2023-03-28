@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index,follow">
+    <link rel="icon" href="images/it_home_macos_bigsur_icon_190082.ico">
+    <link rel="stylesheet" href="Styles/implementation.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://fontawesome.com/icons"></script>
+    <script src="https://kit.fontawesome.com/a4dace6bf3.js" crossorigin="anonymous"></script>
+    <title>Implementation</title>
+</head>
+<body>
+   
+
+    <header>
+            <nav>
+            <div class="menu-icon"><span class="fas fa-bars"></span></div>
+            <div class="logo"><a href="index.html">BubbleSort</a></div>                
+                <div class="nav-items">
+                    <li><a href="implementation.html">Implementare</a></li>
+                    <li><a href="interactive.html">Interactiv</a></li>
+                    <li><a href="quiz.html">Quiz</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </div>
+
+                <div class="search-icon"><span class="fas fa-search"></span></div>
+                <div class="cancel-icon"><span class="fas fa-times"></span></div>
+
+                <form action="#">
+                    <input type="search" class= "search-data" placeholder= "Cauta cuvinte" required>
+                    <button type= "submit" class="fas fa-search"></button>
+                </form>
+            </nav>
+    </header>
+  
+
+
+    <div class="main-content">
+        <div class="video box" id="video">
+            <video width="800" height="540" controls>
+                <source src="images/BubbleSort.mp4" type="video/mp4">
+              </video>
+        </div>
+        
+        <div class="wrapper1 box" id="button1">
+            <div class="collapsible">
+                <input type="checkbox" id="collapsible-head">
+                <label for="collapsible-head">Bubble Sort Code in C++</label>
+                <div class="collapsible-text">
+                    <p><img src="images/screenC++.jpg" alt="Error" width="400" height="400"></p>
+                </div>
+            </div>
+        </div>
+    
+        <div class="wrapper2 box" id="button2">
+            <div class="collapsible2">
+                <input type="checkbox" id="collapsible-head2">
+                <label for="collapsible-head2">Bubble Sort Code in Python</label>
+                <div class="collapsible-text2">
+                    <p><img src="images/ss2.jpg" alt="Error" width="400" height="400"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <script>
+        const menuBtn = document.querySelector(".menu-icon span");
+        const searchBtn = document.querySelector(".search-icon");
+        const cancelBtn = document.querySelector(".cancel-icon");
+        const items = document.querySelector(".nav-items");
+        const form = document.querySelector("form");
+        const video = document.querySelector(".video");
+        const wrapper1 = document.querySelector(".wrapper1");
+        const wrapper2 = document.querySelector(".wrapper2");
+
+        menuBtn.onclick = () => {
+            items.classList.add("active");
+            menuBtn.classList.add("hide");
+            searchBtn.classList.add("hide");
+            cancelBtn.classList.add("show");
+            video.classList.add("hide");
+            wrapper1.classList.add("hide");
+            wrapper2.classList.add("hide");
+
+        }
+
+        cancelBtn.onclick = () => {
+            items.classList.remove("active");
+            menuBtn.classList.remove("hide");
+            searchBtn.classList.remove("hide");
+            cancelBtn.classList.remove("show");
+            form.classList.remove("active");
+            video.classList.remove("hide");
+            wrapper1.classList.remove("hide");
+            wrapper2.classList.remove("hide");
+        }
+
+        searchBtn.onclick = () => {
+            form.classList.add("active");
+            searchBtn.classList.add("hide");
+            cancelBtn.classList.add("show");
+        }
+    </script>
+</body>
+</html>

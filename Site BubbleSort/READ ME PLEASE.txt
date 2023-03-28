@@ -1,0 +1,5 @@
+	Site ul arata perfect pe un size al textului si al aplicatiilor
+din setarile laptopului de 125%.
+
+"Change the size of text, apps, and other items."
+		125%

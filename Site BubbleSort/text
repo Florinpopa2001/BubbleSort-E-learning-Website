@@ -1,0 +1,86 @@
+<h1 class="what-is-bubble-sort">What is Bubble Sort?</h1> 
+<img src="images/bubble.jpeg" alt="Tehnica bulelor" class="bubbles-image" >
+
+    <div class="div-text">
+        <div class="definition-bubble-sort-div">
+            <pre class="definition-bubble-sort">             
+                 Bubble sort is a sorting algorithm that compares two adjacent elements and swaps them 
+                until they are in the intended order.Just like the movement of air bubbles in the water that 
+                riseup to the surface, each element of the array move to the end in each iteration.Bubble
+                sort is great for already sorted lists because it has an “already sorted” check built into the
+                algorithm.Therefore, if the list with ’n’ number of elements is already sorted, the sort will
+                only have to check and compare each elementonce.This gives bubble sort an O(n) 
+                complexity in the best case. 
+            </pre>
+        </div>
+        
+    
+        <br>
+        <h2 >How does Bubble Sort Work? <br>
+            Input: arr[] = {5, 1, 4, 2, 8}</h2>
+       
+        <br><br>
+        <h3 class="home-text"><li>First pass:</li>
+            Bubble sort starts with very first two elements,
+            comparing them to check which one is greater. 
+            <br>Firstly, the algorithm compares the first two elements, and swaps since 5 > 1.
+        </h3>
+        
+        <br><br>
+        <ol type=hidden class="home-text1" >
+            <li><p>(<B class="numbers"> 1 5</B> 4 2 8) –>(<b class="numbers">1 5</b> 4 2 8 )</p></li>
+            <li><p>(1 <b class="numbers">5 4</b> 2 8) –>(1 <b class="numbers">4 5</b> 2 8), Swap since 5 > 4 </p></li>
+            <li><p>(1 4 <b class="numbers">5 2</b> 8) –>(1 4 <b class="numbers">2 5</b> 8), Swap since 5 > 2 </p></li>
+            <li><p>(1 4 2 <b class="numbers">5 8</b>) –>(1 4 2 <b class="numbers">5 8</b>), Now, since these elements are already in order (8 > 5), algorithm does not swap them.</p></li>
+        </ol>
+        <br><br><br>
+        <h3 class="home-text"><li>Second pass:</li></h3>
+        <br>
+      
+    
+        <ol class="home-text1">
+            <li>(<b class="numbers">1 4</b> 2 5 8) –> (<b class="numbers">1 4</b> 2 5 8) </li>
+            <li>(1 <b class="numbers">4 2</b> 5 8) –> (1 <b class="numbers">2 4</b> 5 8), Swap since 4 > 2 </li>
+            <li>(1 2 <b class="numbers">4 5</b> 8) –> (1 2 <b class="numbers">4 5</b> 8) </li>
+            <li>(1 2 4 <b class="numbers">5 8</b>) –> (1 2 4 <b class="numbers">5 8</b>) </li>
+        </ol>
+        <br><br><br>
+        <h3 class="home-text"><li>Third Pass: </li>
+            Now, the array is already sorted, but our algorithm does not know if it is completed.
+        </h3>
+        <br><br>
+
+        <ol class="home-text1">
+            <li>(<b class="numbers">1 2</b> 4 5 8) –> (<b class="numbers">1 2</b> 4 5 8) </li>
+            <li>(1 <b class="numbers">2 4</b> 5 8) –> (1 <b class="numbers">2 4</b> 5 8) </li>
+            <li>(1 2 <b class="numbers">4 5</b> 8) –> (1 2 <b class="numbers">4 5</b> 8) </li>
+            <li>(1 2 4 <b class="numbers">5 8</b>) –> (1 2 4 <b class="numbers">5 8</b>) </li>
+        </ol> 
+    </div>  
+    
+   
+    <img  class="rabbit-turtle-image" src="images/rabbit.jpg" alt="The animals had been sold.Kidding,the image doesn't work!"  width="420" height="350">
+    <br>
+    <h1 class="turtle-rabbit-text">Example of the rabbit and the turtle</h1> 
+
+    <p7 id="image2-text">Bubble sort is slow at moving small items that are near the end of the list 
+        and  fast at moving <br> large items to the end. These are often referred to as  
+        turtles   and rabbits, based on the characters <br> from Aesop's fable “The Tortoise and the Hare.” 
+        The small items are often called “turtles” since <br> they are slow to move into position. 
+        The large items are often called “rabbits” since they move <br> quickly.</p7><br><br>
+
+    <p8 id="rabbit-ex-numbers">Ex: 5 3 6 1 8 7 2 4</p8> <br>
+    
+    <p9>In this example, 6 is a rabbit since it is near
+        the beginning of the list and is brought to the correct <br>
+        location in three iterations. On the other hand, 2 is a turtle since it is a small value near the end of <br>
+        the list and will move by one element in every iteration.</p9>                                                                                                                                                             <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+    <h1 class="conclusion-text">Conclusion</h1>
+
+     <p class="conclusion-p">
+        <pre>  Bubble sort is typically regarded as a useless algorithm because it is
+inefficient and is typically only good for lists or arrays with few elements.
+However, it can be useful in  very specific circumstances because it can 
+efficiently move several elements into place  with one pass.</pre></p>
+
